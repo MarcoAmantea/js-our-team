@@ -53,10 +53,10 @@ const emailInput = document.getElementById("email")
 function member(teams){
     const { name, role, email, img } = teams;
     return `
-    <div class="card mb-3 col-lg-4 col-md-12 col-sm-12 bg-dark">
+    <div class="card mb-4 col-lg-4 col-md-12 col-sm-12 bg-black">
       <div class="row">
         <div class="col-6">
-          <img src="./${img}" class="img-fluid rounded-start" alt="${name}">
+          <img src="./${img}" class="img-fluid rounded-circle" alt="${name}">
         </div>
         <div class="col-6">
           <div class="card-body">
