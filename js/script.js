@@ -47,12 +47,12 @@ const emailInput = document.getElementById("email")
 const createCard = (teams) => {
     const { name, role, email, img } = teams;
     return `
-    <div class="card mb-3 col-4 bg-dark">
-      <div class="row g-0">
-        <div class="col-4">
+    <div class="card mb-3 col-lg-4 col-md-12 col-sm-12 bg-dark">
+      <div class="row">
+        <div class="col-6">
           <img src="./${img}" class="img-fluid rounded-start" alt="${name}">
         </div>
-        <div class="col-4">
+        <div class="col-6">
           <div class="card-body">
             <h5 class="card-title text-white">${name}</h5>
             <p class="card-text text-white">${role}</p>
