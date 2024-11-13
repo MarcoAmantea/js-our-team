@@ -34,7 +34,13 @@ const teamMembers = [
         role: "Analyst",
         email: "danielaamet@team.com",
         img: "img/female3.png"
-    }
+    },
+    {
+      name: "Marco Amantea",
+      role: "FAKE WEB DEVELOPER",
+      email: "marcoamantea18@gmail.com",
+      img: "img/me.png"
+  }
 ];
 
 const teamContainer = document.getElementById("team-container")
@@ -44,7 +50,7 @@ const roleInput = document.getElementById("role");
 const imageInput = document.getElementById("image");
 const emailInput = document.getElementById("email")
 
-const createCard = (teams) => {
+function member(teams){
     const { name, role, email, img } = teams;
     return `
     <div class="card mb-3 col-lg-4 col-md-12 col-sm-12 bg-dark">
@@ -68,7 +74,7 @@ const createCard = (teams) => {
 const renderTeam = () => {
     let items = "";
     for (let i = 0; i < teamMembers.length; i++) {
-        const card = createCard(teamMembers[i]);
+        const card = member(teamMembers[i]);        
         items += card;
     }
     teamContainer.innerHTML = items;
