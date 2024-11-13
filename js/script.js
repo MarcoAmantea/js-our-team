@@ -38,6 +38,11 @@ const teamMembers = [
 ];
 
 const teamContainer = document.getElementById("team-container")
+const memberForm = document.getElementById("member-form");
+const nameInput = document.getElementById("name");
+const roleInput = document.getElementById("role");
+const imageInput = document.getElementById("image");
+const emailInput = document.getElementById("email")
 
 const createCard = (teams) => {
     const { name, role, email, img } = teams;
@@ -69,4 +74,26 @@ const renderTeam = () => {
     teamContainer.innerHTML = items;
 };
 
+const handleSubmit = (event) => {
+    event.preventDefault();
+    const name = nameInput.value.trim();
+    const role = roleInput.value.trim();
+    const img = imageInput.value.trim();  
+    const email = emailInput.value.trim();
+    const newMember = {
+      name,
+      role,
+      email,
+      img
+    }
+  
+    teamMembers.push(newMember);
+    console.log(teamMembers);
+  
+    renderTeam();  
+    memberForm.reset();
+  };
+
 renderTeam()
+memberForm.addEventListener("submit", handleSubmit);
+
